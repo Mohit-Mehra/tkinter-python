@@ -29,5 +29,9 @@ new_label.pack()
 button = tk.Button(master = window, text = 'Button', command = button_func)
 button.pack()
 
+# ttk close botton
+close_bt = tk.Button(master=window, text="Close", command=quit)
+close_bt.pack()
+
 # run
 window.mainloop()
