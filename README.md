@@ -1,5 +1,9 @@
 ## RESURSE:
 [https://docs.python.org/3/library/tk.html](https://docs.python.org/3/library/tk.html)
+***
+[https://realpython.com/python-gui-tkinter/#adding-a-widget](https://realpython.com/python-gui-tkinter/#adding-a-widget)
+***
+
 
 
 1. 19_tk_pomodoro_menu_class.py
