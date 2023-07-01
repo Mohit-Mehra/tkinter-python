@@ -1,3 +1,7 @@
+## RESURSE:
+[https://docs.python.org/3/library/tk.html](https://docs.python.org/3/library/tk.html)
+
+
 1. 19_tk_pomodoro_menu_class.py
 
 ![img](Capture.PNG)
