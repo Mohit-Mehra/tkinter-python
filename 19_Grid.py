@@ -24,7 +24,7 @@ window.rowconfigure(3, weight = 3)
 
 # Pace Widgets
 label1.grid(row = 0, column = 0, sticky = 'nsew')
-label2.grid(row = 0, column = 1,sticky = 'w')
-label3.grid(row = 0, column = 3,sticky = 'ew')
+label2.grid(row = 1, column = 1,rowspan=3,sticky = 'nsew')
+label3.grid(row = 1, column = 0,columnspan=3,sticky = 'nsew')
 
 window.mainloop()
