@@ -135,5 +135,3 @@ Each topic in Tkinter is accompanied by practical examples and coding exercises 
 ## Requirements
 
 To work with Tkinter, you need Python installed on your system. Tkinter comes bundled with Python, so you don't need to install it separately.
-
-
