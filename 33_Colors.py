@@ -16,6 +16,5 @@ ttk.Label(window, background='#000').pack(expand=True, fill='both')
 # white
 ttk.Label(window, background='#FFF').pack(expand=True, fill='both')
 
-
 ttk.Label(window, background='#888').pack(expand=True, fill='both')
 window.mainloop()
