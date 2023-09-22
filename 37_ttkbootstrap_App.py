@@ -70,9 +70,11 @@ class Main(ttk.Frame):
 
         frame = ttk.Frame(self)
         label = ttk.Label(frame, text='Test 1', background='cyan')
+        label2 = ttk.Label(frame, text='Test 1', background='cyan')
         button = ttk.Button(frame, text='Button')
 
         label.pack(expand=True, fill="both")
+        label2.pack(expand=True, fill="both")
         button.pack(expand=True, fill="both", pady=10)
         frame.pack(side="left", expand=True, fill='both')
 
