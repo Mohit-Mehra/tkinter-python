@@ -4,20 +4,20 @@ from random import choice
 
 class SlidePanel(ctk.CTkFrame):
     def __init__(self, parent, start_pos, end_pos):
-        super().__init__(master=parent, fg_color='cyan')
+        super().__init__(master=parent)
 
-        self.start_pos = start_pos
-        self.end_pos = end_pos
+        self.start_pos = start_pos + 0.04
+        self.end_pos = end_pos - 0.03
         self.width = abs(start_pos - end_pos)
 
-        self.pos = start_pos
+        self.pos = self.start_pos
         self.in_start_pos = True
 
         self.place(
             relx=self.start_pos,
-            rely=0,
+            rely=0.05,
             relwidth=self.width,
-            relheight=1
+            relheight=0.9
         )
 
     def animate(self):
@@ -31,9 +31,9 @@ class SlidePanel(ctk.CTkFrame):
             self.pos -= 0.008
             self.place(
                 relx=self.pos,
-                rely=0,
+                rely=0.05,
                 relwidth=self.width,
-                relheight=1
+                relheight=0.9
             )
             self.after(10, self.animate_forward)
         else:
@@ -44,9 +44,9 @@ class SlidePanel(ctk.CTkFrame):
             self.pos += 0.008
             self.place(
                 relx=self.pos,
-                rely=0,
+                rely=0.05,
                 relwidth=self.width,
-                relheight=1
+                relheight=0.9
             )
             self.after(10, self.animate_backword)
         else:
@@ -77,8 +77,25 @@ def infinite_print():
 window = ctk.CTk()
 window.title("Animated Widgets")
 window.geometry('600x400')
+# ctk.set_appearance_mode('light')
 
-animated_panel = SlidePanel(window, 0, -0.3)
+animated_panel = SlidePanel(window, 1.0, 0.7)
+ctk.CTkLabel(animated_panel, text="Label").pack(
+    expand=True,
+    fill='both',
+    padx=2,
+    pady=10
+)
+ctk.CTkButton(animated_panel, text="Button", corner_radius=0).pack(
+    expand=True,
+    fill='both',
+    pady=10
+)
+ctk.CTkTextbox(animated_panel, fg_color=('#dbdbdb', '#2b2b2b')).pack(
+    expand=True,
+    fill='both',
+    pady=10
+)
 
 button_x = 0.5
 button = ctk.CTkButton(window,
