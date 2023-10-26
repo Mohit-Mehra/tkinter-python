@@ -19,24 +19,24 @@ def stretch_image(event):
     canvas.create_image(0, 0, image=resized_tk, anchor='nw')
 
 
-def fill_image(event):
-    global resized_tk
+# def fill_image(event):
+#     global resized_tk
 
-    # current ratio of the event
-    canvas_ratio = event.width / event.height
+#     # current ratio of the event
+#     canvas_ratio = event.width / event.height
 
-    # get Coordinates
-    if canvas_ratio > image_ratio:
-        width = int(event.width)
-        height = int(width / image_ratio)
-    else:
-        width = 1
-        height = 1
+#     # get Coordinates
+#     if canvas_ratio > image_ratio:
+#         width = int(event.width)
+#         height = int(width / image_ratio)
+#     else:
+#         width = 1
+#         height = 1
 
-    resized_image = image_original.resize((width, height))
-    resized_tk = ImageTk.PhotoImage(resized_image)
-    canvas.create_image(int(event.width/2),
-                        int(event.height/2), anchor="center", image=resized_tk)
+#     resized_image = image_original.resize((width, height))
+#     resized_tk = ImageTk.PhotoImage(resized_image)
+#     canvas.create_image(int(event.width/2),
+#                         int(event.height/2), anchor="center", image=resized_tk)
 
 
 # window
